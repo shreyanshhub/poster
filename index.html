@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QPAudioEraser Poster - IJCB 2025</title>
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+        body { background-color: #f0f2f5; font-family: 'Lato', sans-serif; color: #333; line-height: 1.45; margin: 0; padding: 0; }
+        .poster {
+            width: 1800px;
+            min-height: 1012px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #005a9c; padding-bottom: 20px; margin-bottom: 25px; }
+        .contact-info { flex: 1; text-align: left; }
+        .contact-info img { width: 110px; height: 110px; }
+        .contact-info p { font-size: 0.85em; margin-top: 10px; color: #444; }
+        .title-block { flex: 5; text-align: center; padding: 0 30px; }
+        h1 { font-size: 3.2em; color: #1a237e; margin: 0; line-height: 1.2; font-weight: 700; }
+        .authors { font-size: 1.3em; margin: 10px 0 5px 0; color: #333; }
+        .affiliations { font-size: 1.1em; color: #555; margin: 0; }
+        .logos { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 20px; }
+        .logos img { height: 75px; width: auto; }
+        .content-grid { display: grid; grid-template-columns: 1fr 1.8fr 1.2fr; gap: 35px; flex: 1; }
+        .column { display: flex; flex-direction: column; gap: 15px; }
+        h2 { font-size: 1.8em; color: #005a9c; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; margin-top: 0; margin-bottom: 5px; }
+        h3 { font-size: 1.3em; margin-top: 5px; margin-bottom: 5px; color: #1a237e; }
+        .figure { text-align: center; margin: 5px 0; }
+        .figure img { max-width: 100%; height: auto; border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; }
+        figcaption { font-size: 0.9em; color: #555; margin-top: 8px; text-align: left; }
+        .results-img { width: 100%; border: 1px solid #ccc; margin-bottom: 5px; }
+        ul, ol { padding-left: 20px; margin: 0; }
+        li { margin-bottom: 8px; }
+        .equation { background-color: #e8f0fe; padding: 5px 12px; margin: 8px 0; border: 1px solid #d1e0ff; border-radius: 4px; text-align: center; font-size: 1.1em; }
+        .references ul { font-size: 0.8em; list-style-type: none; padding-left: 0; }
+        .references li { margin-bottom: 4px; }
+        .ack { font-size: 0.8em; margin-top: auto; padding-top: 10px; border-top: 1px solid #eee; }
+        @media print {
+            body { background-color: #fff; }
+            .poster { width: 100%; height: 100%; margin: 0; padding: 20px; box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="poster">
+    <header>
+        <div class="contact-info">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://arxiv.org/html/2507.22208v1" alt="QR Code for the Paper">
+            <p><strong>Contact:</strong><br>{d24csa006, ...}@iitj.ac.in</p>
+        </div>
+        <div class="title-block">
+            <h1>Quantum-Inspired Audio Unlearning: Towards Privacy-Preserving Voice Biometrics</h1>
+            <p class="authors">Shreyansh Pathak, Sonu Shreshtha, Richa Singh, Mayank Vatsa</p>
+            <p class="affiliations">Indian Institute of Technology Jodhpur, India</p>
+        </div>
+        <div class="logos">
+            <img src="https://i.postimg.cc/q7bBq2RW/iitj-logo.png" alt="IIT Jodhpur Logo">
+            <img src="https://i.postimg.cc/hGv0kLSR/ijcb-logo.png" alt="IJCB 2025 Logo">
+        </div>
+    </header>
+
+    <main class="content-grid">
+        <!-- === COLUMN 1: INTRODUCTION & EXPERIMENTAL SETUP === -->
+        <section class="column">
+            <h2>Abstract</h2>
+            <p>The widespread adoption of voice biometrics has increased privacy vulnerabilities. Compliance with regulations like GDPR necessitates efficient erasure of individual-specific voice signatures from trained models. Existing unlearning methods designed for visual data inadequately handle the temporal nature of audio signals, leading to incomplete erasure.</p>
+            <p>To address this, we introduce <b>QPAudioEraser</b>, a quantum-inspired audio unlearning framework. Our four-phase approach achieves complete erasure of target data (0% Forget Accuracy) while incurring minimal impact on model utility, with performance degradation on retained data as low as 0.05%.</p>
+
+            <h2>Experimental Setup</h2>
+            <h3>Datasets & Models</h3>
+            <p>We evaluate on four diverse audio datasets: <b>AudioMNIST</b> (digit recognition), <b>Speech Commands</b> (command identification), <b>LibriSpeech</b> (speech transcription), and the <b>Speech Accent Archive</b>, using three architectures: <b>ResNet18</b>, <b>ViT</b>, and a custom <b>CNN</b> for accent unlearning.</p>
+            <h3>Baselines for Comparison</h3>
+            <p>We compare against four established unlearning techniques: Gradient Ascent, Synaptic Dampening, Fisher Forgetting, and Negative Gradient.</p>
+            <h3>Evaluation Metrics</h3>
+            <ul>
+                <li><b>Forget Accuracy (FA) ↓:</b> Accuracy on the forget class. Lower is better (ideal: 0%).</li>
+                <li><b>Retain Accuracy (RA) ↑:</b> Accuracy on the retain classes. Higher is better.</li>
+                <li><b>Privacy Erasure Rate (PER) ↑:</b> Percentage reduction in FA after unlearning.</li>
+            </ul>
+             <h2>Ablation Study</h2>
+            <p>We analyzed the contribution of each component. Results show that destructive interference is key for stabilizing retained accuracy, while the final mixing matrix is critical for guaranteeing complete erasure.</p>
+            
+        </section>
+
+        <!-- === COLUMN 2: THE QPAUDIOERASER FRAMEWORK === -->
+        <section class="column">
+            <h2>The QPAudioEraser Framework</h2>
+            
+            <figcaption><b>Figure 2:</b> The proposed four-phase unlearning pipeline for audio biometric systems.</figcaption>
+            
+            <h3>Four Quantum-Inspired Phases</h3>
+            <ol>
+                <li><b>Destructive Interference:</b> A phase shift initialization immediately weakens the target class \(c_F\). The logit \(z_F = W_F^T h + b_F\) is transformed by negating and scaling its corresponding weights and biases, causing an immediate drop in prediction confidence even before retraining.
+                    <div class="equation">$$ \tilde{W}_F = \frac{W_F \cdot \cos(\pi)}{\sqrt{2}} \quad ; \quad \tilde{b}_F = b_F \cdot \cos(\pi) $$</div>
+                </li>
+                <li><b>Superposition-Based Labels:</b> Forget class labels are replaced with a uniform distribution \(\hat{y} = [1/K, ..., 1/K]\). This maximizes label entropy, removing any specific class identity from the forget samples and forcing the model to treat them as if they belong to every class equally.</li>
+                <li><b>Uncertainty-Maximizing Loss:</b> For retained classes (\(y \neq c_F\)), we use standard Cross-Entropy Loss to preserve performance. For the forget class (\(y = c_F\)), we maximize the prediction entropy \(H(\hat{y})\), driving the model's outputs towards a uniform distribution (maximum uncertainty).
+                    <div class="equation">$$ L_{quantum} = \mathbb{I}[y \neq c_F] \cdot L_{CE} + \lambda \cdot \mathbb{I}[y=c_F] \cdot H(\hat{y}) $$</div>
+                    The gradient term \((1 + \log \hat{y}_j)\) dynamically adjusts predictions, pushing probabilities with low confidence up and high confidence down until uniformity is reached.
+                </li>
+                <li><b>Entanglement-Inspired Mixing:</b> A final weight-mixing step using a matrix \(M\) blends the forget class's representation with those of retained classes. This blurs the decision boundaries and erases any residual discriminative patterns specific to the forgotten class, ensuring its complete removal.</li>
+            </ol>
+        </section>
+
+        <!-- === COLUMN 3: RESULTS & CONCLUSION === -->
+        <section class="column">
+            <h2>Single-Class Unlearning Results</h2>
+            <p>QPAudioEraser perfectly removes the target class (100% PER, 0% FA) while preserving high utility, drastically outperforming baselines which either fail to erase or cause catastrophic forgetting of retained knowledge.</p>
+            
+            <figcaption><b>Table 1:</b> Single class unlearning across datasets. Our method consistently achieves the best privacy-utility balance.</figcaption>
+
+            <h2>Accent Unlearning Results</h2>
+            <p>A challenging task due to overlapping phonetic features. QPAudioEraser is the only method to successfully erase a specific accent (Spanish) while maintaining high accuracy (88.74%) on nine retained accents.</p>
+            
+            <figcaption><b>Table 2:</b> Accent unlearning on Speech Accent Archive.</figcaption>
+            
+            <h2>Conclusion</h2>
+            <p>QPAudioEraser is a robust and practical solution for privacy-preserving audio biometrics. By leveraging quantum-inspired principles, it achieves complete and efficient data erasure without the need for costly retraining, setting a new benchmark for responsible AI in speech technologies.</p>
+            
+            <div class="references">
+                <h2>References</h2>
+                <ul>
+                    <li>[1] Y. Cao and J. Yang. Towards making systems forget with machine unlearning. In <em>IEEE S&P</em>, 2015.</li>
+                    <li>[2] A. Ginart et al. Making ai forget you: Data deletion in machine learning. In <em>NeurIPS</em>, 2019.</li>
+                    <li>[3] K. He et al. Deep residual learning for image recognition. In <em>CVPR</em>, 2016.</li>
+                    <li>[4] J. Shi et al. Deepclean: Machine unlearning on the cheap... In <em>ECCV Workshops</em>, 2024.</li>
+                    <li>[5] K. Thakral et al. Fine-grained erasure in text-to-image diffusion-based foundation models. In <em>CVPR</em>, 2025.</li>
+                </ul>
+            </div>
+             <p class="ack"><b>Acknowledgment:</b> This research is supported through a grant from IndiaAI Mission.</p>
+        </section>
+    </main>
+</div>
+</body>
+</html>
+
