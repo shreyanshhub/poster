@@ -88,6 +88,8 @@
                 <li><b>Forget Accuracy (FA) ↓:</b> Accuracy on the forget class. Lower is better (ideal: 0%).</li>
                 <li><b>Retain Accuracy (RA) ↑:</b> Accuracy on the retain classes. Higher is better.</li>
                 <li><b>Privacy Erasure Rate (PER) ↑:</b> Percentage reduction in FA after unlearning.</li>
+                <li><b>Information Leakage (IL) ↓:</b>Quantifies the model’s residual confidence in predicting the forget class for its true samples</li> 
+                <li><b>Erasing Retention Balance Score (ERB) ↑:</b>Harmonic mean of RA and FA</li>
             </ul>
              <h2>Ablation Study</h2>
             <p>We analyzed the contribution of each component. Results show that destructive interference is key for stabilizing retained accuracy, while the final mixing matrix is critical for guaranteeing complete erasure.</p>
