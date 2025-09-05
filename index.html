@@ -128,12 +128,17 @@
                 <img src="single.png" alt="Table of Single Class Unlearning Results" class="results-img">
                 <figcaption><b>Table 1:</b> Single class unlearning across datasets. Our method consistently achieves the best privacy-utility balance.</figcaption>
             </div>
-
+            <h2>Continual Unlearning Results</h2>
+            <p>A realistic deployment may receive multiple “right-to-be-forgotten” requests over time. We removed six out of sixty speakers from AudioMNIST in sequence, rerunning QPAudioEraser after each request. The method maintained PER = 100% at every step.</p>
+            <div class="figure">
+                <img src="continual.png" alt="Table of Single Class Unlearning Results" class="results-img">
+                <figcaption><b>Table 2:</b> Continual class unlearning across different models on AudioMNIST. QP consistently achieves the best privacy-utility balance.</figcaption>
+            </div>
             <h2>Accent Unlearning Results</h2>
             <p>A challenging task due to overlapping phonetic features. QPAudioEraser is the only method to successfully erase a specific accent (Spanish) while maintaining high accuracy (88.74%) on nine retained accents.</p>
             <div class="figure">
                  <img src="accent.png" alt="Table of Accent Unlearning Results" class="results-img">
-                <figcaption><b>Table 2:</b> Accent unlearning on Speech Accent Archive.</figcaption>
+                <figcaption><b>Table 3:</b> Accent unlearning on Speech Accent Archive.</figcaption>
             </div>
             
             <h2>Conclusion</h2>
