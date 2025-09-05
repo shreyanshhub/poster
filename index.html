@@ -66,8 +66,8 @@
             <p class="affiliations">Indian Institute of Technology Jodhpur, India</p>
         </div>
         <div class="logos">
-            <img src="civil-logo-638768678287696495.png" alt="IIT Jodhpur Logo">
-            <img src="Screenshot 2025-09-05 at 5.41.53 PM.png" alt="IJCB 2025 Logo">
+            <img src="https://i.postimg.cc/q7bBq2RW/iitj-logo.png" alt="IIT Jodhpur Logo">
+            <img src="https://i.postimg.cc/hGv0kLSR/ijcb-logo.png" alt="IJCB 2025 Logo">
         </div>
     </header>
 
@@ -91,14 +91,18 @@
             </ul>
              <h2>Ablation Study</h2>
             <p>We analyzed the contribution of each component. Results show that destructive interference is key for stabilizing retained accuracy, while the final mixing matrix is critical for guaranteeing complete erasure.</p>
-            
+            <div class="figure">
+                <img src="https://i.postimg.cc/prpB6C6F/ablation-study-table.png" alt="Ablation Study of QPAudioEraser on AudioMNIST" class="results-img">
+            </div>
         </section>
 
         <!-- === COLUMN 2: THE QPAUDIOERASER FRAMEWORK === -->
         <section class="column">
             <h2>The QPAudioEraser Framework</h2>
-            <img src="framework.png" alt="IIT Jodhpur Logo" height="100">
-            <figcaption><b>Figure 2:</b> The proposed four-phase unlearning pipeline for audio biometric systems.</figcaption>
+            <div class="figure">
+                 <img src="https://i.postimg.cc/T3s0T7j3/framework-figure.png" alt="The four-phase pipeline of the QPAudioEraser framework">
+                <figcaption><b>Figure 2:</b> The proposed four-phase unlearning pipeline for audio biometric systems.</figcaption>
+            </div>
             
             <h3>Four Quantum-Inspired Phases</h3>
             <ol>
@@ -118,14 +122,17 @@
         <section class="column">
             <h2>Single-Class Unlearning Results</h2>
             <p>QPAudioEraser perfectly removes the target class (100% PER, 0% FA) while preserving high utility, drastically outperforming baselines which either fail to erase or cause catastrophic forgetting of retained knowledge.</p>
-            <img src="single.png" alt="IIT Jodhpur Logo">
-            <figcaption><b>Table 1:</b> Single class unlearning across datasets. Our method consistently achieves the best privacy-utility balance.</figcaption>
+            <div class="figure">
+                <img src="https://i.postimg.cc/c1NqKJP2/single-class-results.png" alt="Table of Single Class Unlearning Results" class="results-img">
+                <figcaption><b>Table 1:</b> Single class unlearning across datasets. Our method consistently achieves the best privacy-utility balance.</figcaption>
+            </div>
 
             <h2>Accent Unlearning Results</h2>
             <p>A challenging task due to overlapping phonetic features. QPAudioEraser is the only method to successfully erase a specific accent (Spanish) while maintaining high accuracy (88.74%) on nine retained accents.</p>
-            
-            <img src="accent.png" >
-            <figcaption><b>Table 2:</b> Accent unlearning on Speech Accent Archive.</figcaption>
+            <div class="figure">
+                 <img src="https://i.postimg.cc/Y0d3j4yV/accent-unlearning-results.png" alt="Table of Accent Unlearning Results" class="results-img">
+                <figcaption><b>Table 2:</b> Accent unlearning on Speech Accent Archive.</figcaption>
+            </div>
             
             <h2>Conclusion</h2>
             <p>QPAudioEraser is a robust and practical solution for privacy-preserving audio biometrics. By leveraging quantum-inspired principles, it achieves complete and efficient data erasure without the need for costly retraining, setting a new benchmark for responsible AI in speech technologies.</p>
@@ -146,4 +153,6 @@
 </div>
 </body>
 </html>
+
+
 
